@@ -1,0 +1,1 @@
+cmd_/home/ubuntu/sysprogram/week4/helloworld/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ubuntu/sysprogram/week4/helloworld/hello.ko /home/ubuntu/sysprogram/week4/helloworld/hello.o /home/ubuntu/sysprogram/week4/helloworld/hello.mod.o ;  true
