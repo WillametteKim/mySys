@@ -123,6 +123,7 @@ int __init simple2_init(void)
 	printk("sudo mknod -m 666 /dev/simple_chr_dev c %d 0\n", MAJOR(devno));
 	//이 메시지를 보면 어떤 devno 할당받았는지 확인가능. MAJOR()로 해당 디바이스#의 메이저 넘버 조회.
 	//mknod 경로(simple~) 모드(c 문자파일) 디바이스(devno), 우린 여기서 -m을 이용해 초기값 지정을 무시했다.
+	//만약 insmod~ major=280이라고 하면 이 메이저 넘버로 할당됨.
 
 	msg = (char *)kmalloc(32, GFP_KERNEL);
 	if (msg != NULL)

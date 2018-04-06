@@ -1,0 +1,1 @@
+cmd_/home/ubuntu/sysprogram/week5/concurrency/ioctl_app_dev.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ubuntu/sysprogram/week5/concurrency/ioctl_app_dev.ko /home/ubuntu/sysprogram/week5/concurrency/ioctl_app_dev.o /home/ubuntu/sysprogram/week5/concurrency/ioctl_app_dev.mod.o ;  true
