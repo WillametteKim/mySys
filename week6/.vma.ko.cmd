@@ -1,0 +1,1 @@
+cmd_/home/ubuntu/sysprogram/week6/vma.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ubuntu/sysprogram/week6/vma.ko /home/ubuntu/sysprogram/week6/vma.o /home/ubuntu/sysprogram/week6/vma.mod.o ;  true

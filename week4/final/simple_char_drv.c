@@ -30,6 +30,10 @@ char msgIncorrect[] = "NOT TEST";	//RETURN MSG
 
 //module_param(name, type, permission), 모듈이 시작될 때 파라미터 받아온다~
 module_param(major, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
+//S_IRUSR: 사용자 읽기 권한
+//S_IWUSR: 사용자 쓰기 권한, 한번에 합쳐서 S_IRWXU로 표현 가능
+//S_IRGRP: 그룹 읽기 권한...
+
 MODULE_PARM_DESC(major, "major");
 
 

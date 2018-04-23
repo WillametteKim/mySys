@@ -1,0 +1,1 @@
+cmd_/home/ubuntu/sysprogram/week6/mmap.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ubuntu/sysprogram/week6/mmap.ko /home/ubuntu/sysprogram/week6/mmap.o /home/ubuntu/sysprogram/week6/mmap.mod.o ;  true

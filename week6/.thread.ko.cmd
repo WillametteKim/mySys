@@ -1,0 +1,1 @@
+cmd_/home/ubuntu/sysprogram/week6/thread.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ubuntu/sysprogram/week6/thread.ko /home/ubuntu/sysprogram/week6/thread.o /home/ubuntu/sysprogram/week6/thread.mod.o ;  true

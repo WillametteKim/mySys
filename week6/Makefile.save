@@ -1,0 +1,26 @@
+KERNELDIR = /lib/modules/$(shell uname -r)/build
+
+obj-m := vma.o
+
+PWD := $(shell pwd)
+
+
+all: default insmod mknod clean
+
+default :
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+
+rmmod:
+	sudo rmmod ioctl_app_dev
+
+rm:
+	sudo rm /dev/ioctl_app_dev
+
+insmod:
+	sudo insmod vma.ko major=28`
+
+mknod:
+	sudo mknod -m 666 /dev/vma c 28` 0
+
+clean:
+	rm *.o
