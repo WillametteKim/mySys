@@ -22,6 +22,8 @@ int main(int argc, char **argv)
 {
 	int fd1 = 0, fd2 = 0, fd3 = 0;
 	char buf[5+1] = "";
+	char buf1[6] = "";
+	char buf2[6] = "";
 
 	if(argc != 2)
 	{
@@ -46,7 +48,7 @@ int main(int argc, char **argv)
 	}
 	else printf("dup(fd1): %d\n", fd2);
 
-	fd3 = dup2(fd1, 3);
+	fd3 = dup2(fd1, 4);
 	if(fd3 == -1)
 	{
 		perror("fail to open\n");
@@ -60,13 +62,13 @@ int main(int argc, char **argv)
 	printf("at fd%d: %s\n", fd1, buf);
 	close(fd1);
 
-	read(fd2, buf, 5);
-	printf("at fd%d: %s\n", fd2, buf);
-	close(fd2);
+	read(fd2, buf1, 5);
+	printf("at fd%d: %s\n", fd2, buf1);
+//	close(fd2);
 
 	//여기선 fd1 fd2 close한 뒤 fd3로 read하는 것이니, 결국 파일 처음부터 fd1으로 읽는 것과 같다.
-	read(fd3, buf, 5);
-	printf("at fd%d: %s\n", fd3, buf);
+	read(fd3, buf2, 5);
+	printf("at fd%d: %s\n", fd3, buf2);
 
 	return 0;
 }
