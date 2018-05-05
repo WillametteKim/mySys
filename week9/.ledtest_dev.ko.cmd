@@ -1,0 +1,1 @@
+cmd_/home/pi/sysprogram/mySys/week9/ledtest_dev.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/sysprogram/mySys/week9/ledtest_dev.ko /home/pi/sysprogram/mySys/week9/ledtest_dev.o /home/pi/sysprogram/mySys/week9/ledtest_dev.mod.o ;  true
