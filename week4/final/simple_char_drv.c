@@ -1,12 +1,3 @@
-/*
-User App
-	<Low level file op.>
-Device File
-	<system call, file op.>
-Device Driver
-	<hardware control>
-H/W
-*/
 
 #include <linux/init.h>
 #include <linux/module.h>
